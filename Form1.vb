@@ -19,7 +19,7 @@
         ComboBox2.SelectedIndex = -1
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnprocess.Click
         ' Pastikan semua kontrol ada di form
         If TextBox1 Is Nothing Or TextBox2 Is Nothing Or ComboBox1 Is Nothing Or ComboBox2 Is Nothing Or RadioButton1 Is Nothing Or RadioButton2 Is Nothing Then
             MessageBox.Show("Ada elemen yang belum ditambahkan di desain!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -50,13 +50,17 @@
         End If
 
         ' Tampilkan pesan hasil input
-        Dim hasil As String = "Hai : " & nama & vbCrLf &
-                              "NIP : " & nip & vbCrLf &
+        Dim hasil As String = "NIP : " & nama & vbCrLf &
+                              "Hai : " & nip & vbCrLf &
                               "Nama : " & nama & vbCrLf &
                               "Fakultas : " & fakultas & vbCrLf &
                               "Jurusan : " & jurusan & vbCrLf
                               "Jenis Kelamin : " & jenisKelamin
 
         MessageBox.Show(hasil, "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
+
     End Sub
 End Class
